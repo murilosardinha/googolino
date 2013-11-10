@@ -13,9 +13,21 @@
  */
 .icon-search {
   position: relative;
-  right: 10px;
   top: -25px;
+  left: 80px;
 }
 .form-control {
-  padding: 6px 25px 6px 12px;
+  padding: 6px 25px 6px 12px !important;
+  width: 145% !important;
+
 }
+.logo {
+  background: url("logo.png") no-repeat scroll -15px 0 transparent;
+  float: left;
+  height: 80px;
+  width: 110px;
+}
+h1 {
+  padding-top: 20px;
+}
+
