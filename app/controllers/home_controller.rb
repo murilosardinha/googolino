@@ -4,18 +4,9 @@ class HomeController < ApplicationController
 
     if product_name = params[:produto] || 'notebooks'
       words = product_name.split(" ")
-      @search = words.join('+')
+      search = words.join('+')
 
-      site = open("http://busca.americanas.com.br/busca.php?q=" + @search)
-      document = Nokogiri::HTML(site)
-
-
-      @titulo = document.css(".cont .url .name").to_a
-
-      #@prods = Hash.new
-      #@prods[:titulo] = document.css(".cont .url .name").to_a
-      #@prods[:image] = document.css(".prods .url img")
-
+       @crawl = AmericanasCrawler.new.crawl path: "/busca.php?q=#{search}"
 
     end
 

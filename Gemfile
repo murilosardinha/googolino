@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1.rc3'
@@ -35,6 +35,22 @@ gem 'therubyracer'
 gem 'less-rails'
 
 gem 'nokogiri'
+
+
+group :development, :test do
+  gem 'capybara'
+  gem 'rspec-rails'
+end
+
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
+  gem 'factory_girl_rails', '~> 4.0'
+end
+
+
+gem 'wombat', git: 'https://github.com/nandosousafr/wombat.git'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
