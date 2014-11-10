@@ -36,7 +36,8 @@ gem 'less-rails'
 
 gem 'nokogiri'
 
-
+gem 'better_errors'
+gem 'binding_of_caller'
 group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'

@@ -3,16 +3,20 @@ class AmericanasCrawler
 
   base_url "http://busca.americanas.com.br"
 
-  search_name css: '.searchName'
+  products "css=.products-area .single-product", :iterator do
+    title 'css=.prodTitle'
 
-  products'css=.prods ul li', :iterator do
-    title 'css=.cont .name'
-    image 'css=.url', :html do |url|
-      url.match(/src\=\"(http\:\/\/.*\.jpg)\"\slongdesc/)
+    image 'css=.productImg .url', :html do |data|
+      data.to_s.match(/src\=\"(http\:\/\/.*\.jpg)\"/)
       $1
     end
 
+    price 'css=.price-area', :html do |p|
+      p
+    end
+
   end
+
 
 
 end

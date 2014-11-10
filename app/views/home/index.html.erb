@@ -2,18 +2,11 @@
   <div class="logo"></div>
   <h1 class="text-success">Googolino <small >O seu consultor de compras Online</small></h1>
 
-  <%
-    # não faz sentido este partial esta em layouts pq ele esta dentro desta view
-    # melhor maneira: ou move ele para /home/views/home ou mova este conteudo para layouts/application
-    # a segunda opção faz mais sentido se você ira utilizar este bloco de conteudo em outras telas da aplicação
-    render 'layouts/form'
-  %>
-
-
+  <%= render 'layouts/form' %>
 
 </div>
 
-<div class="container">
+<div id="ng-app" ng-app ng-controller="PostsCtrlAjax">
 
   <% @crawl['products'].each do |product| %>
     <div class="col-sm-6 col-md-4">
@@ -22,8 +15,8 @@
         <div class="caption">
           <p class="product-description"><%= product['title'] %></p>
           <p>
-            <a href="#" class="btn btn-primary" role="button">Button</a>
-            <a href="#" class="btn btn-default" role="button">Button</a>
+            <a href="#" class="btn btn-primary" role="button">R$</a>
+            <%= link_to 'Ver', product['href'], class:'btn btn-default' %>
           </p>
         </div>
       </div>
@@ -31,3 +24,5 @@
   <% end %>
 
 </div><!--CONTAINER-->
+
+
