@@ -38,6 +38,9 @@ gem 'nokogiri'
 
 gem 'better_errors'
 gem 'binding_of_caller'
+
+gem 'wombat', git: 'https://github.com/murilosardinha/wombat.git'
+
 group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'
@@ -49,9 +52,6 @@ group :test do
   gem 'webmock'
   gem 'factory_girl_rails', '~> 4.0'
 end
-
-
-gem 'wombat', git: 'https://github.com/murilosardinha/wombat.git'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
