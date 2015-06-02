@@ -51,7 +51,7 @@ group :test do
 end
 
 
-gem 'wombat', git: 'https://github.com/nandosousafr/wombat.git'
+gem 'wombat', git: 'https://github.com/murilosardinha/wombat.git'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

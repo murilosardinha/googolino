@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/nandosousafr/wombat.git
-  revision: f8fc381ef7f70566cfb7073a7864c8cb2fed8346
+  remote: https://github.com/murilosardinha/wombat.git
+  revision: ec7adeb374b81065a251d65b7cde64cb1233cbda
   specs:
     wombat (2.1.3)
       activesupport
@@ -73,7 +73,7 @@ GEM
       safe_yaml (~> 0.9.0)
     debug_inspector (0.0.2)
     diff-lcs (1.2.4)
-    domain_name (0.5.14)
+    domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -116,7 +116,8 @@ GEM
     minitest (4.7.5)
     multi_json (1.8.2)
     net-http-digest_auth (1.4)
-    net-http-persistent (2.9)
+    net-http-persistent (2.9.4)
+    netrc (0.10.3)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     ntlm-http (0.1.1)
@@ -142,8 +143,10 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rspec-core (2.14.7)
     rspec-expectations (2.14.3)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -189,9 +192,9 @@ GEM
     uglifier (2.3.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unf (0.1.3)
+    unf (0.1.4)
       unf_ext
-    unf_ext (0.0.6)
+    unf_ext (0.0.7.1)
     vcr (2.7.0)
     webmock (1.15.2)
       addressable (>= 2.2.7)
