@@ -46,12 +46,13 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-
 group :test do
   gem 'vcr'
   gem 'webmock'
   gem 'factory_girl_rails', '~> 4.0'
 end
+
+gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
